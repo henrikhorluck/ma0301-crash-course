@@ -1,0 +1,23 @@
+\section{Boolsk logikk}
+
+I denne delen vil snakker en om (åpne) \textit{påstander} (propositions),
+vanligvis representert i form av en eller flere av variablene $p, q, r, s$ og $t$.
+Hver påstand kan da enten være sann, eller usann, og representerer enten ved ordene \textit{true}/\textit{false},
+gjerne forkortet til $T/F$, eller $1/0$.\\
+Men, vi vet ikke hvorvidt disse påstandene er sanne eller usanne, og er vanligvis heller ikke interesert i dette,
+men ønsker heller å finne nye påstander, utledet av disse påstandene, som vi kan garantere er sanne, som kalles en \textit{tautologi},
+eller garantere at de er usanne, som kalles en \textit{motsigelse} (contradiction).
+
+
+\begin{displaymath}
+    \begin{array}{|c c|c|c|c|}
+        \hline
+        p & q & p \to q & (p \to q) \to p & ((p \to q) \to p) \to p\\
+        \hline
+        1 & 1 & 1 & 1 & 1\\
+        1 & 0 & 0 & 1 & 1\\
+        0 & 1 & 1 & 0 & 1\\
+        0 & 0 & 1 & 0 & 1\\
+        \hline
+    \end{array}
+\end{displaymath}
