@@ -90,27 +90,31 @@ Jeg har lagt ved noen praktiske sannhetstabeller i Figur \ref{figure:truth_table
 \label{figure:truth_tables}
 \end{figure}
 
-\begin{figure}[h]
-    \centering
-    Exercise 8, Exercise set 1, 2019: Negate $(p \lor \neg q) \land \neg p$
-        
-    \begin{tabular}{ l | c c }
-    \multicolumn{1}{l}{}
- &  \multicolumn{1}{c}{Step}
- & \multicolumn{1}{c}{Reasoning} \\
-      \hline
-    1 & $(p \lor \neg q) \land \neg p$ & Initial statement \\ 
-    2 & $\neg ((p \lor \neg q) \land \neg p)$ & Step (1), Negation \\  
-    3 & $\neg (p \lor q) \lor \neg ( \neg p)$ & Step (2), De Morgan's Law \\
-    4 & $(\neg p \land \neg ( \neg q)) \lor p$ & Step (3), De Morgan's Law and Double negation\\
-    5 & $(\neg p \land q) \lor p$ & Step (4), Double Negation\\
-    6 & $p \lor (\neg p \land q)$ & Step (5), Associative law\\
-    7 & $(p \lor \neg p) \land (p \lor q)$ & Step (6), Distributive law and Commutative law\\
-    8 & $T_{0} \land (p \lor q)$ & Step (7), Inverse law\\
-    9 & $p \lor q$ & Step (8), Identity law\\
+\subsection{Oppgaver}
+
+\subsubsection{Exercise 8, Exercise set 1, 2019}
+Negate the expression
+\[
+(p \lor \neg q) \land \neg p
+\]
+
+\paragraph*{Løsningsforslag}
+\begin{align*}
+\begin{tabular}{ l | c c }
+\multicolumn{1}{l}{}
+&  \multicolumn{1}{c}{Step}
+& \multicolumn{1}{c}{Reasoning} \\
     \hline
-    $\therefore$ & $p \lor q$ & Final negated statement
-    \end{tabular}
-    \caption{En løsning på en oppgave med negasjon og forenkling}
-    \label{}
-\end{figure}
+1 & $(p \lor \neg q) \land \neg p$ & Initial statement \\ 
+2 & $\neg ((p \lor \neg q) \land \neg p)$ & Step (1), Negation \\  
+3 & $\neg (p \lor q) \lor \neg ( \neg p)$ & Step (2), De Morgan's Law \\
+4 & $(\neg p \land \neg ( \neg q)) \lor p$ & Step (3), De Morgan's Law and Double negation\\
+5 & $(\neg p \land q) \lor p$ & Step (4), Double Negation\\
+6 & $p \lor (\neg p \land q)$ & Step (5), Associative law\\
+7 & $(p \lor \neg p) \land (p \lor q)$ & Step (6), Distributive law and Commutative law\\
+8 & $T_{0} \land (p \lor q)$ & Step (7), Inverse law\\
+9 & $p \lor q$ & Step (8), Identity law\\
+\hline
+$\therefore$ & $p \lor q$ & Final negated statement
+\end{tabular}
+\end{align*}
