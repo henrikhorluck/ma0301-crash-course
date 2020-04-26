@@ -1,1 +1,25 @@
 \section{Induksjon}
+
+\subsection{Oppgaver}
+
+\subsubsection{Exercise 12, Exercise set 6, spring 2019}
+Show that if $u_n$ is defined recursively by the 
+rules $u_1 = 1,u_2 = 5$ and for all $n>1,u_{n+1}= 5u_n -6u_{n-1}$, then $u_n = 3n-2n$ for all $n\in \mathbb{N}$
+\paragraph*{Løsningsforslag}
+Base step: Proving for $n=1$ and $n=2$:
+\begin{align*}
+    u_1 = 1\\
+    3^1-2^1 = 1\\
+    u_2 = 5\\
+    3^2-2^2 = 5
+\end{align*}
+We have now proved the statement for $n=1$ and $n=2$, we can assume the truth of the statement for $S(1), S(2), \dots,S(k-1), S(k)$ and want to show that that indicates that $S(k+1)$ is true:
+\begin{align*}
+    u_{k+1} &= 5u_{k}-6u_{k-1}\\
+    &= 5(3^k-2^k)-6(3^{k-1}-2^{k-1})\\
+    &= 5(3^k)-5(2^k)-6(\dfrac{1}{3}3^k)+6(\dfrac{1}{2}2^k)\\
+    &= 5(3^k)-5(2^k)-2(3^k)+3(2^k)\\
+    &= 3(3^k)-2(2^k)\\
+    &= 3^{k+1}-2^{k+1}
+\end{align*}
+And thus we have proven the truth of the statement for all $n \in \mathbb{N}$
