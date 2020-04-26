@@ -9,9 +9,48 @@
     \end{scope}
     %Lines
     \begin{scope}[>={Stealth[black]}, every node/.style={fill=white,circle}]
-        \draw[->] (2.east) -- (3.west);
+        \draw[-] (2.east) -- (3.west);
         \draw[->] (1.east) -- (2.west);
         \draw[->] (3.south) -- (4.north);
         \path [->] (1) edge[bend right=60] node {$1$} (4); 
     \end{scope}
-    \end{tikzpicture}
+\end{tikzpicture}
+
+\subsection{Oppgaver}
+
+\subsubsection{V2006 - Oppgave 6}
+\textbf{a)} Er disse grafene isomorfe?
+\begin{align*}
+\begin{tikzpicture}
+    \begin{scope}[every node/.style={shape=circle,draw, fill=black}]
+        \node(1) {};
+        \node(2)[right=of 1] {};
+        \node(3)[below =of 1] {};
+        \node(4)[below right = of 1] {};
+    \end{scope}
+    %Lines
+    \draw[thick]   (1) -- (3)
+            (3) -- (2)
+            (3) -- (4); 
+\end{tikzpicture}
+\qquad
+\qquad
+\begin{tikzpicture}
+    \begin{scope}[every node/.style={shape=circle,draw, fill=black}]
+        \node(1) {};
+        \node(2)[right=of 1] {};
+        \node(3)[below =of 1] {};
+        \node(4)[below right = of 1] {};
+    \end{scope}
+    %Lines
+    \draw[thick]   (1) -- (3)
+            (4) -- (2)
+            (3) -- (4); 
+\end{tikzpicture}
+\end{align*}
+
+\noindent \textbf{b)} Finn 11 løkke-frie(loop-free) ikke-isomorfe uretta(non-directed) grafer med 4 hjørner.\\
+\textbf{c)} Vis at de 11 grafene du fant i b) er alle mulige løkke-frie ikke-isomorfe uretta grafer med 4 hjørner.\\
+\indent Tips: tell kanter.
+
+\paragraph*{Løsning} %TODO

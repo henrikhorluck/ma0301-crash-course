@@ -1,1 +1,40 @@
 \section{Mengdelære}
+
+Mengder er en samling med \textit{distinkte} elementer. De har stort sett de samme reglene
+som boolsk logikk, og \href{https://www.wikipendium.no/MA0301_Elementary_Discrete_Mathematics#sets}{Wikipendium} beskriver dette godt.
+Det er viktig å ha god kontroll på dette, grunnet mengdelæren er en byggesten for mange av de senere temaene.\\
+Ting å kunne til eksamen:
+\begin{itemize}
+    \item Medlem i mengden: \(x\in A\), \(x\not\in B\)
+    \item Delmengder: \(A \subset B, A\subseteq B, A\not\subset B, A \not\subseteq B\)
+    \item Vise likhet: \(A=B \Leftrightarrow A\subseteq B \land B \subseteq A\)
+    \item Kardinalitet (antall elementer i en mengde): \(|A|\)
+    \item Den tomme mengde, \(\emptyset = \{\} \left(\neq \{\{\}\} = \{\emptyset\}\right)\)
+    \item Potensmengde (Power set): \(\mathcal{P}(A) = \{a ~|~ a \subseteq A\}\)
+    \item Kardinaliteten til potensmengden: \(|\mathcal{P}(A)| = 2^{|A|}\)\\
+    En må også kunne begrunne dette.
+    \item Union, snitt, symmetrisk differanse, gjerne ved venn-diagram: \(\cup, \cap, \triangle\)
+    \item Regneregler (som er identisk med logikken)
+\end{itemize}
+
+% Skriv om setbuilder-notasjon
+\noindent Viktig å få med seg at mengdene \(\{a, a, a, a\}\) og \(\{a\}\) er identiske. Samme for \(\{a, b, a\}\) og \(\{b, a\}\)
+
+\subsection{Oppgaver}
+
+\subsubsection{V2008 - Oppgave 3}
+La $A$ og $B$ være to mengder. Skriv mengden
+\[
+(A\cup B)-(B-A)    
+\]
+på kortest mulig måte.
+
+\subsubsection{TMA4140 - K2019 Oppgave 1}
+
+Avgjør om følgende likhet av mendge holder for alle mendger $X$ med
+delmendger $A,B,C,D \subseteq X$.
+\[
+\overline{A \cup ((\overline{A} \cup B)\cap (C\cup \overline{B})\cap (D\cup \overline{C}))} \cup (\overline{A} \cup D) = X   
+\]
+
+\paragraph*{Løsning} % TODO

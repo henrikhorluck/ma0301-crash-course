@@ -1,23 +1,116 @@
 \section{Boolsk logikk}
 
-I denne delen vil snakker en om (åpne) \textit{påstander} (propositions),
-vanligvis representert i form av en eller flere av variablene $p, q, r, s$ og $t$.
-Hver påstand kan da enten være sann, eller usann, og representerer enten ved ordene \textit{true}/\textit{false},
-gjerne forkortet til $T/F$, eller $1/0$.\\
-Men, vi vet ikke hvorvidt disse påstandene er sanne eller usanne, og er vanligvis heller ikke interesert i dette,
-men ønsker heller å finne nye påstander, utledet av disse påstandene, som vi kan garantere er sanne, som kalles en \textit{tautologi},
-eller garantere at de er usanne, som kalles en \textit{motsigelse} (contradiction).
+Dette forklares veldig godt i \href{https://www.wikipendium.no/MA0301_Elementary_Discrete_Mathematics#logic}{Wikipendium}.
+Jeg har lagt ved noen praktiske sannhetstabeller i Figur \ref{figure:truth_tables}, som må pugges.\\
 
+\noindent Oppgaver består vanligvis av en av følgende:
+\begin{enumerate}
+    \item \textbf{Forenkle uttrykk} Da gjelder det å kunne \textit{Laws of Logic}, om du blir
+    bedt om negasjon av et utrykk er det nøyaktig samme oppgave.
+    OBS du kan \textit{ikke} benytte deg av implikasjons-reglene (Rules of inference),
+    siden det er implikasjoner, og ikke ekvivalenser, altså er uttrykkene du kan utlede ikke 
+    de samme som det du hadde i utgangspunkt. 
+    \item \textbf{Vise at noe er en tautologi, eller motsigelse} Det løses ofte ved hjelp av 
+    sannhetstabeller, men om de skulle bli for store, f.eks. grunnet $\geq 3$ påstander, så kan en 
+    benytte seg av implikasjons-reglene, og ha fokus på de relevante variablene. Dersom du skal undersøke en implikasjon,
+    og venstre side er stor, men høyre side er mye mindre, kan en fokusere på de verdiene av 
+    variablene som fører til at høyre side er usann, og forsøke å få venstre side sann. Om du finner et sett med
+    verdier for variablene, hvor venstre side er sann, men høyre er usann, så har du vist at det er en motsigelse.
+    \item \textbf{Bekrefte validitet av konklusjon} Da får du vanligvis oppgitt en rekke påstander, som alle antas å stemme,
+    og du så benytte deg av implikasjoner for å finne ut om den oppgitte konklusjonen er sann eller ikke.
+\end{enumerate}
 
-\begin{displaymath}
-    \begin{array}{|c c|c|c|c|}
+\begin{figure}[h]
+\centering
+\begin{align*}
+    \begin{array}{|c|c|}
         \hline
-        p & q & p \to q & (p \to q) \to p & ((p \to q) \to p) \to p\\
+        p & \neg p\\
         \hline
-        1 & 1 & 1 & 1 & 1\\
-        1 & 0 & 0 & 1 & 1\\
-        0 & 1 & 1 & 0 & 1\\
-        0 & 0 & 1 & 0 & 1\\
+        1 & 0 \\
+        0 & 1 \\
         \hline
     \end{array}
-\end{displaymath}
+    \qquad
+    \begin{array}{|c c|c|}
+        \hline
+        p & q & p \lor q\\
+        \hline
+        1 & 1 & 1\\
+        1 & 0 & 1\\
+        0 & 1 & 1\\
+        0 & 0 & 0\\
+        \hline
+    \end{array}
+    \qquad
+    \begin{array}{|c c|c|}
+        \hline
+        p & q & p \land q\\
+        \hline
+        1 & 1 & 1\\
+        1 & 0 & 0\\
+        0 & 1 & 0\\
+        0 & 0 & 0\\
+        \hline
+    \end{array}\\
+    \begin{array}{|c c|c|}
+        \hline
+        p & q & p \veebar q\\
+        \hline
+        1 & 1 & 0\\
+        1 & 0 & 1\\
+        0 & 1 & 1\\
+        0 & 0 & 0\\
+        \hline
+    \end{array}
+    \qquad
+    \begin{array}{|c c|c|}
+        \hline
+        p & q & p \to q\\
+        \hline
+        1 & 1 & 1\\
+        1 & 0 & 0\\
+        0 & 1 & 1\\
+        0 & 0 & 1\\
+        \hline
+    \end{array}
+    \qquad
+    \begin{array}{|c c|c|}
+        \hline
+        p & q & p \leftrightarrow q\\
+        \hline
+        1 & 1 & 1\\
+        1 & 0 & 0\\
+        0 & 1 & 0\\
+        0 & 0 & 1\\
+        \hline
+    \end{array}
+\end{align*}
+\caption{Sannhetstabellen til operatoren negasjon, logisk eller, logisk og, logisk eksklusiv eller, implikasjon, og ekvivalens}
+\label{figure:truth_tables}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    Exercise 8, Exercise set 1, 2019: Negate $(p \lor \neg q) \land \neg p$
+        
+    \begin{tabular}{ l | c c }
+    \multicolumn{1}{l}{}
+ &  \multicolumn{1}{c}{Step}
+ & \multicolumn{1}{c}{Reasoning} \\
+      \hline
+    1 & $(p \lor \neg q) \land \neg p$ & Initial statement \\ 
+    2 & $\neg ((p \lor \neg q) \land \neg p)$ & Step (1), Negation \\  
+    3 & $\neg (p \lor q) \lor \neg ( \neg p)$ & Step (2), De Morgan's Law \\
+    4 & $(\neg p \land \neg ( \neg q)) \lor p$ & Step (3), De Morgan's Law and Double negation\\
+    5 & $(\neg p \land q) \lor p$ & Step (4), Double Negation\\
+    6 & $p \lor (\neg p \land q)$ & Step (5), Associative law\\
+    7 & $(p \lor \neg p) \land (p \lor q)$ & Step (6), Distributive law and Commutative law\\
+    8 & $T_{0} \land (p \lor q)$ & Step (7), Inverse law\\
+    9 & $p \lor q$ & Step (8), Identity law\\
+    \hline
+    $\therefore$ & $p \lor q$ & Final negated statement
+    \end{tabular}
+    \caption{En løsning på en oppgave med negasjon og forenkling}
+    \label{}
+\end{figure}

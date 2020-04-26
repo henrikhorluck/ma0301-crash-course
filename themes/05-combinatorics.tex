@@ -1,1 +1,33 @@
 \section{Kombinatorikk}
+
+
+\subsection{Oppgaver}
+\subsubsection{TMA4140 - K2019, Oppgave 2a}
+Hva er koeffisienten til leddet $x^4 y^6$ i polynomet $(2x-3y)^{10}$?
+
+\paragraph*{Løsning}
+
+Benytter Binomalteoremet
+\[
+(x+y)^n=\sum_{k=0}^{n}\binom{n}{k} x^k y^{n-k}
+\]
+Vi ønsker å se på ledd 4 i summen, der hvor $x$ har potens 4.
+\begin{align}
+    \binom{10}{4}(2x)^4(-3y)^6 &= \binom{10}{4}\cdot 2^4 \cdot x^4 \cdot (-3)^6 \cdot y^6\\
+    &= \binom{10}{4}\cdot 2^4 \cdot (-3)^6 \cdot x^4 y^6\\
+    &= \binom{10}{4} 2^4 3^6 \cdot x^4 y^6
+\end{align}
+Dermed har vi at koeffisienten blir $\binom{10}{4} 2^4 3^6 $
+
+\subsubsection{TMA4140 - K2019, Oppgave 2b}
+Hvor mange injektive funksjoner finnes det fra $\{1,2,3,4\}$ til $\{1,2,3,4,5,6,7,8\}$
+
+\paragraph*{Løsning} 
+
+Her må en huske definisjonen av en funksjon. Da har man for hvert element i definisjonsmengden/domenet 
+ett valg i verdiområdet/kodomenet, som sammen utgjør bildet til funksjonen. Siden funksjonene skal være
+injektive, blir det utvalg uten tilbakelegging, og siden det er fire elementer i domenet, og funksjonen
+må ha et definert output for hvert element i domenet, må vi velge fire ganger. Dermed blir svaret:
+\[
+8\cdot 7 \cdot 6\cdot 5   
+\]

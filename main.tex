@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[a4paper]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -9,7 +9,17 @@
 \usepackage{amssymb}
 \usepackage{tikz}
 \usetikzlibrary{positioning}
-\usetikzlibrary{arrows.meta}
+\usetikzlibrary{arrows.meta,automata}
+
+% Figurer og URL-er
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=teal
+}
 % Allows writing theorems
 \newtheorem{theorem}{Theorem}[section]
 
@@ -19,6 +29,11 @@
 
 % Kommentar
 \maketitle
+
+\tableofcontents
+
+\newpage
+\input{themes/00-introduction.tex}
 
 \newpage
 \input{themes/01-boolean_logic.tex}
