@@ -19,21 +19,6 @@ den inverse grafen, siden den også skal være isomorf.
 
 Homeomorfi, er en litt videre variant av isomorfi, hvor vi også tillatter elementær subdivisjoner, altså å splitte kanter
 
-\begin{tikzpicture}
-    \begin{scope}[every node/.style={circle,thick,draw}]
-        \node(1){1};
-        \node(2)[right=of 1] {2};
-        \node(3)[right=of 2] {3};
-        \node(4)[below=of 3] {4};
-    \end{scope}
-    %Lines
-    \begin{scope}[>={Stealth[black]}, every node/.style={fill=white,circle}]
-        \draw[-] (2.east) -- (3.west);
-        \draw[->] (1.east) -- (2.west);
-        \draw[->] (3.south) -- (4.north);
-        \path [->] (1) edge[bend right=60] node {$1$} (4); 
-    \end{scope}
-\end{tikzpicture}
 
 \subsection{Oppgaver}
 

@@ -3,7 +3,7 @@
 Induksjon handler om å velte dominobrikker. Du viser først at den første brikken faller, for så å vise at en hvilken som helst brikke vill falle, dersom den forrie falt.
 Dersom det omhandler sterkt induksjon, så endres hyptotesen en del, og da ser en heller på dersom alle tidligere brikker falt, vill neste falle? Og det medfører at man må teste et par flere tilfeller manuelt.
 
-\subsection{Hvordan gjennomfør induksjonsbevis}
+\subsection{Hvordan gjennomføre et induksjonsbevis}
 \begin{enumerate}
     \item Finn ut hvilken påstand du skal bevise!
     \item Vis at det stemmer for det første tilfellet. Vanligvis er det for0eller1
@@ -14,6 +14,13 @@ Dersom det omhandler sterkt induksjon, så endres hyptotesen en del, og da ser e
 \end{enumerate}
 
 \subsection{Oppgaver}
+
+\subsubsection{Exercise 3, spring 2016}
+Let $r\in\mathbb{R}$ with $r\neq 1$. Use induction to prove that
+\[
+\sum_{i=0}^{n}r^i = \frac{1-r^{n+1}}{1-r}    
+\]
+for all $n\in \mathbb{Z}_+$
 
 \subsubsection{Exercise 12, Exercise set 6, spring 2019}
 Show that if $u_n$ is defined recursively by the 
@@ -37,9 +44,3 @@ We have now proved the statement for $n=1$ and $n=2$, we can assume the truth of
 \end{align*}
 And thus we have proven the truth of the statement for all $n \in \mathbb{N}$
 
-\subsubsection{Exercise 3, spring 2016}
-Let $r\in\mathbb{R}$ with $r\neq 1$. Use induction to prove that
-\[
-\sum_{i=0}^{n}r^i = \frac{1-r^{n+1}}{1-r}    
-\]
-for all $n\in \mathbb{Z}_+$
