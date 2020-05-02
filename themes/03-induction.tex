@@ -8,10 +8,12 @@ Dersom det omhandler sterkt induksjon, så endres hyptotesen en del, og da ser e
     \item Finn ut hvilken påstand du skal bevise!
     \item Vis at det stemmer for det første tilfellet. Vanligvis er det for0eller1
     \item Anta at det stemmer for tilfellek, og skriv opp hva det vil si.Dette kalles induksjonshypotesen.
-    \item Skriv opp hva du vil bevise i tilfelletk+ 1. Hvis det involvereren (u)likhet, som det som regel gjør i MA0301: Begynn med åkna på venstre side helt til venstre side frak-tilfellet dukkeropp. Bruk induksjonshypotesten, altså bytt ut VS forkmedHS fork. Kna videre på det uttrykket du nå har fått, slik atdet til slutt ser ut som det du ville komme fram til.
+    \item Skriv opp hva du vil bevise i tilfelletk+ 1. Hvis det involvereren (u)likhet, som det som regel gjør i MA0301: Begynn med å kna på venstre side helt til venstre side fra k-tilfellet dukker opp. Bruk induksjonshypotesten, altså bytt ut VS for k med HS fork. Kna videre på det uttrykket du nå har fått, slik at det til slutt ser ut som det du ville komme fram til.
     \item Q.E.D.
     \item Øve på oppgaver
 \end{enumerate}
+
+Hentet fra \url{https://wiki.math.ntnu.no/_media/ma0301/2014v/repetisjon.pdf}
 
 \subsection{Oppgaver}
 
@@ -22,11 +24,27 @@ Let $r\in\mathbb{R}$ with $r\neq 1$. Use induction to prove that
 \]
 for all $n\in \mathbb{Z}_+$
 
+\paragraph*{Løsningsforslag}
+Base step: \begin{align*}
+\text{Venstre side:} \sum_{i=0}^{1} r^i &= r^0+r = r+1\\
+\text{Høyre side:} \frac{1-r^{1+1}}{1-r} &= \frac{1-r^2}{1-r}= \frac{(1-r)(1+r)}{1-r} = 1+r
+\end{align*}
+Inductive hypothesis: vi antar $P(k)$ sann, for en $k$ mellom $1$ og $n$, altså at vi kan skrive $\sum_{i=0}^{k}r^i = \frac{1-r^{k+1}}{1-r}$.
+Inductive step:
+\begin{align*}
+    \sum_{i=0}^{k+1} r^i &= \sum_{i=0}^{k} + r^{k+1}\\
+    &\overset{Ind.Hyp.}{=} \frac{1-r^{k+1}}{1-r} + r^{k+1}\\
+    &= \frac{1-r^{k+1}}{1-r} + \frac{r^{k+1}-r\cdot r^{k+1}}{1-r}\\
+    &= \frac{1-r^{k+1}+r^{k+1}-r^{(k+1)+1}}{1-r}\\
+    &= \frac{1-r^{(k+1)+1}}{1-r}
+\end{align*}
+
+
 \subsubsection{Exercise 12, Exercise set 6, spring 2019}
 Show that if $u_n$ is defined recursively by the 
-rules $u_1 = 1,u_2 = 5$ and for all $n>1,u_{n+1}= 5u_n -6u_{n-1}$, then $u_n = 3n-2n$ for all $n\in \mathbb{N}$
+rules $u_1 = 1,u_2 = 5$ and for all $n>1,u_{n+1}= 5u_n -6u_{n-1}$, then $u_n = 3^n - 2^n$ for all $n\in \mathbb{N}$
 \paragraph*{Løsningsforslag}
-Base step: Proving for $n=1$ and $n=2$:
+Base step: Proving for $n=1$ and $n=2$ (NOTE: Should rather prove $n=2$, and $n=3$, since that is the exercise):
 \begin{align*}
     u_1 = 1\\
     3^1-2^1 = 1\\
