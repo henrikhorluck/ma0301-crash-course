@@ -1,1 +1,29 @@
 \section{Relasjoner og funksjoner}
+
+Her er det Kartesiske produktet viktig. Både relasjoner og funksjoner er delmendger av det
+kartesiske produktet. 
+
+Viktige mendger: $\mathbb{N}, \mathbb{Z}, \mathbb{Q}, \mathbb{R}$, dette er mendger dere har vært borti i lang tid, bare at vi nå ser litt mer spesifikt på de.
+
+For relasjoner må disse fire konseptene forstås, her er $A$ og $B$ mengder, og $R$ en relasjon mellom disse:
+\paragraph*{Refleksivitet} $\forall_{a\in A} (a,a)\in R$
+\paragraph*{Transitivitet} $(a,b) \in R\land (b,c)\in R \to (a,c) \in R$
+\paragraph*{Symmetri} $(a,b)\in R \to (b,a) \in R$
+\paragraph*{Anti-symmetri} $(a,b) \in R \land (b,a)\in R \to a=b$\\
+
+\noindent Utdyp forskjell mellom symmetri og anti-symmetri med høyde-eksempel, og et hasse-diagram.
+
+Refleksivitet, Transitivitet, og Symmetri gir en ekvivalensrelasjon, mens Refleksivitet, Transitivitet, og Anti-symmetri gir en partiell ordning.
+
+\subsection{Funksjoner}
+
+Funksjoner har dere jobbet mye med tidligere, gjerne i formen av $f(x) = x^2$ eller liknende. Her skal vi se på det litt mer generelt.
+Formelt sett defineres en funksjon som $f:A\to B$ er en delmendge av $A \times B$ slik at det for enhver $a\in A$
+finnes et unikt element $b\in B$, og vi skriver $b=f(a)$
+
+Det er spesielt to egenskaper somer viktig å merke seg:
+
+\paragraph*{Injektiv} Eller en-til-en, altså at det kun finnes maksimalt ett element i $A$ som peker til ethvert element i $B$. Vanlig å vise ved å sette $f(x)=f(y)$ og se om de kun finnes en løsning.
+\paragraph*{Surjektiv} Eller \enquote{på}, som vil si at funksjonen dekker hele kodomenet, altså for alle $b\in B$, så finnes det en $a\in A$ slik at $f(a)=b$
+\paragraph*{Bijektiv} En funksjon er bijektiv, dersom den er både injektiv og surjektiv.
+

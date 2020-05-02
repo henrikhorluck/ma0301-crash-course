@@ -1,5 +1,18 @@
 \section{Induksjon}
 
+Induksjon handler om å velte dominobrikker. Du viser først at den første brikken faller, for så å vise at en hvilken som helst brikke vill falle, dersom den forrie falt.
+Dersom det omhandler sterkt induksjon, så endres hyptotesen en del, og da ser en heller på dersom alle tidligere brikker falt, vill neste falle? Og det medfører at man må teste et par flere tilfeller manuelt.
+
+\subsection{Hvordan gjennomfør induksjonsbevis}
+\begin{enumerate}
+    \item Finn ut hvilken påstand du skal bevise!
+    \item Vis at det stemmer for det første tilfellet. Vanligvis er det for0eller1
+    \item Anta at det stemmer for tilfellek, og skriv opp hva det vil si.Dette kalles induksjonshypotesen.
+    \item Skriv opp hva du vil bevise i tilfelletk+ 1. Hvis det involvereren (u)likhet, som det som regel gjør i MA0301: Begynn med åkna på venstre side helt til venstre side frak-tilfellet dukkeropp. Bruk induksjonshypotesten, altså bytt ut VS forkmedHS fork. Kna videre på det uttrykket du nå har fått, slik atdet til slutt ser ut som det du ville komme fram til.
+    \item Q.E.D.
+    \item Øve på oppgaver
+\end{enumerate}
+
 \subsection{Oppgaver}
 
 \subsubsection{Exercise 12, Exercise set 6, spring 2019}
@@ -23,3 +36,10 @@ We have now proved the statement for $n=1$ and $n=2$, we can assume the truth of
     &= 3^{k+1}-2^{k+1}
 \end{align*}
 And thus we have proven the truth of the statement for all $n \in \mathbb{N}$
+
+\subsubsection{Exercise 3, spring 2016}
+Let $r\in\mathbb{R}$ with $r\neq 1$. Use induction to prove that
+\[
+\sum_{i=0}^{n}r^i = \frac{1-r^{n+1}}{1-r}    
+\]
+for all $n\in \mathbb{Z}_+$

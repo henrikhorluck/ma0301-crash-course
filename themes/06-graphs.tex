@@ -1,5 +1,24 @@
 \section{Grafer}
 
+\subsection{Terminologi}
+Jeg vil gå igjennom det viktigste i forhold til hver oppgave, men dette er godt beskrevet i Wikipendium.
+\subsection{Isomorfi}
+
+Aka. er to grafer like?
+
+\noindent Krav: Må kunne finne en \enquote{mapping} (funksjon) mellom alle noder og kanter.
+
+Å teste ut alle mulige funksjoner tar \textit{mye} tid, siden det vokser fort.
+
+Derfor ser man på enkelte \textit{egenskaper} ved grafer, siden disse må deles av begge grafene,
+dersom de skal være like.
+
+Da ser en ofte på egenskaper som graden til noder, og graden til nabo-noder, og sjekker at antallet der stemmer overrens.
+Men det er også andre egenskaper å teste, som hvorvidt grafen er sammenhengene, og det kan en sjelden gang være lønnsomt å sjekke
+den inverse grafen, siden den også skal være isomorf.
+
+Homeomorfi, er en litt videre variant av isomorfi, hvor vi også tillatter elementær subdivisjoner, altså å splitte kanter
+
 \begin{tikzpicture}
     \begin{scope}[every node/.style={circle,thick,draw}]
         \node(1){1};
