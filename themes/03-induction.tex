@@ -32,7 +32,7 @@ Base step: \begin{align*}
 Inductive hypothesis: vi antar $P(k)$ sann, for en $k$ mellom $1$ og $n$, altså at vi kan skrive $\sum_{i=0}^{k}r^i = \frac{1-r^{k+1}}{1-r}$.
 Inductive step:
 \begin{align*}
-    \sum_{i=0}^{k+1} r^i &= \sum_{i=0}^{k} + r^{k+1}\\
+    \sum_{i=0}^{k+1} r^i &= \sum_{i=0}^{k} r^i + r^{k+1}\\
     &\overset{Ind.Hyp.}{=} \frac{1-r^{k+1}}{1-r} + r^{k+1}\\
     &= \frac{1-r^{k+1}}{1-r} + \frac{r^{k+1}-r\cdot r^{k+1}}{1-r}\\
     &= \frac{1-r^{k+1}+r^{k+1}-r^{(k+1)+1}}{1-r}\\
